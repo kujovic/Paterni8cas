@@ -20,7 +20,7 @@ public interface Status {
     
     public static Status vratiOdgovarajuciStatus(int espb){
         Status status;
-        
+        //State patern
         if(espb<37){
             status = new StatusObnavljanje();
         } else if(espb <47){
