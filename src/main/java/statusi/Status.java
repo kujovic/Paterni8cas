@@ -6,10 +6,9 @@ package statusi;
 
 import rs.saga.paterni_8cas.Student;
 
-/**
- *
- * @author stefan.kujovic
- */
+//Promena statusa, da prelazi iz jednog u drugi...---State patern
+//Factory patern, staticka metoda...kada logiku kreiranja izmestamo logiku (ni abstract ni method)
+
 public interface Status {
 
     public void upisiNarednuGodinu(Student s);
@@ -20,7 +19,7 @@ public interface Status {
     
     public static Status vratiOdgovarajuciStatus(int espb){
         Status status;
-        //State patern
+        
         if(espb<37){
             status = new StatusObnavljanje();
         } else if(espb <47){
